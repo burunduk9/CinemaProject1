@@ -1,0 +1,57 @@
+﻿<Page x:Class="CinemaProject.PageApp.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CinemaProject.PageApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdminPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1">
+            <StackPanel Orientation="Horizontal">
+                <!--<TextBox x:Name="Searchtxt" TextChanged="Searchtxt_TextChanged" Width="240"/>-->
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="sortUp" Click="SortUp_Click" Width="80"/>
+                <Button Content="sortDown" Click="SortDown_Click" Width="80"/>
+                <Button Content="search" Click="Search_Click" Width="80"/>
+            </StackPanel>
+        </StackPanel>
+        
+        <Label Content="Admin Page" FontSize="24"/>
+        <Frame x:Name="ListFrame" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.Row="1"/>
+        <StackPanel Grid.Row="1">
+            <Label Content="add new"/>
+            <Button Content="Add DVD" Click="AddDVDbtn_Click"/>
+            <Button Content="Add Client" Click="AddClientbtn_Click"/>
+            <Button Content="Add Employee" Click="AddEmployeebtn_Click"/>
+
+            <Label Content="service"/>
+            <Button Content="Rental DVD" Click="RentalDVDbtn_Click"/>
+            <Button Content="Return DVD" Click="ReturnDVDbtn_Click"/>
+            <Button Content="Rental view" Click="RentalViewbtn_Click"/>
+
+            <Label Content="lists"/>
+            <Button Content="View List DVD" Click="ViewListDVDbtn_Click"/>
+            <Button Content="View List Client" Click="ViewListClientbtn_Click"/>
+            <Button Content="View List Employee" Click="ViewListEmployeebtn_Click"/>
+
+            <Label/>
+            <Button Content="export data" Name="exportBtn" Click="exportBtn_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            
+        </StackPanel>
+    </Grid>
+</Page>
